@@ -1,1 +1,51 @@
+# Mini RAG Application
 
+A production-ready Retrieval-Augmented Generation (RAG) application that allows users to upload documents, ask questions, and receive answers with proper citations.
+
+## Live Demo
+
+https://ragwork-exs9vpejy8gq3ybhwf6mqg.streamlit.app/
+
+## Architecture
+
+User Input → Text Chunking → Google Embedding → Pinecone Vector DB
+↓
+User Query → Retrieval → Cohere Reranking → ChatGoogleGenerativeAI → Formatted Answer with Citations
+
+
+## Components
+
+### Vector Database
+- **Provider**: Pinecone
+- **Index Name**: `mini-rag-index`
+- **Dimensionality**: 768 (Google embedding-001)
+- **Metric**: Cosine similarity
+- **Upsert Strategy**: Batch upsert in groups of 100 vectors
+
+### Embeddings & Chunking
+- **Embedding Model**: Google Generative AI Embedding (models/embedding-001)
+- **Chunking Strategy**: 
+  - Size: 1000 characters
+  - Overlap: 150 characters (15%)
+- **Metadata**: source, chunk_index, total_chunks
+
+### Retriever + Reranker
+- **Retriever**: Pinecone similarity search with configurable top-k (default: 10)
+- **Reranker**: Cohere rerank-english-v2.0 with configurable top-n (default: 5)
+
+### LLM & Answering
+- **Provider**: Google Generative AI via LangChain
+- **Model**: gemini-1.0-pro
+- **Answer Format**: Formatted responses with inline citations ([1], [2]) and source references
+
+### Frontend
+- **Framework**: Streamlit
+- **Features**: File upload (TXT, PDF), text paste, query input, formatted answer display with citations, timing metrics, query history
+
+## Setup Instructions
+
+### Prerequisites
+- Python 3.8+
+- Pinecone account and API key
+- Google AI API key
+- Cohere API key
