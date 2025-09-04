@@ -1,0 +1,10 @@
+streamlit
+pinecone-client
+langchain
+langchain-community
+cohere
+python-dotenv
+pypdf
+python-docx
+nest-asyncio
+PyPDF2
