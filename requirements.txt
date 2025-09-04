@@ -2,6 +2,7 @@ streamlit
 pinecone
 langchain
 langchain-community
+langchain-google-genai
 cohere
 python-dotenv
 pypdf
