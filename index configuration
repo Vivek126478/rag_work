@@ -1,0 +1,26 @@
+## Pinecone index configuration
+
+{
+  "name": "mini-rag-index",
+  "dimension": 768,
+  "metric": "cosine",
+  "spec": {
+    "serverless": {
+      "cloud": "aws",
+      "region": "us-east-1"
+    }
+  }
+}
+
+## document chunk metadata
+
+{
+  "id": "uuid-string",
+  "values": [embedding-vector],
+  "metadata": {
+    "text": "chunk content",
+    "source": "document filename",
+    "chunk_index": 0,
+    "total_chunks": 10
+  }
+}
