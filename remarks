@@ -1,0 +1,17 @@
+Provider Limits Encountered:
+
+Google AI: Rate limits on free tier required careful error handling and retry logic
+
+Pinecone: Free tier has limitations on index size and operations
+
+Cohere: Free tier has daily request limits for the reranking API
+
+What I Would Do Next:
+
+Enhanced Chunking: Implement semantic chunking that respects document structure and content boundaries
+
+Authentication: Implement user authentication and document isolation
+
+Additional File Support: Add support for more document types (Word, Excel, PowerPoint, web pages)
+
+Monitoring: Add proper logging, monitoring, and analytics
