@@ -6,7 +6,7 @@ import re
 from typing import List, Dict, Any, Tuple
 import pinecone
 from pinecone import Pinecone, ServerlessSpec
-from langchain.text_splitter import RecursiveCharacterTextSplitter
+from langchain_text_splitters import RecursiveCharacterTextSplitter
 from langchain_google_genai import GoogleGenerativeAIEmbeddings, ChatGoogleGenerativeAI
 from langchain.schema import HumanMessage, SystemMessage
 from langchain.output_parsers import StructuredOutputParser, ResponseSchema
