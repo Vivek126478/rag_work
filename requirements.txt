@@ -1,18 +1,18 @@
-# core
-streamlit
+# Core
+streamlit>=1.25.0
 
-# LangChain + Google GenAI integration and new splitters package
-langchain>=0.0.320
+# LangChain + split packages and Google GenAI integration
 langchain-google-genai>=1.0.0
 langchain-text-splitters>=0.1.0
+langchain-core>=0.2.1
 
-# Pinecone (modern SDK that exposes `Pinecone` and `ServerlessSpec`)
+# Pinecone modern client
 pinecone>=3.0.0
 
-# Reranking and LLMs
+# Cohere for rerank
 cohere>=4.0.0
 
-# PDFs and docs
+# PDF & doc handling
 PyPDF2>=3.0.0
 python-docx>=0.8.11
 
@@ -20,5 +20,5 @@ python-docx>=0.8.11
 python-dotenv>=1.0.0
 nest-asyncio>=1.5.4
 
-# Optional: add if you use any async helpers or tokenizers
-# tiktoken>=0.4.0
+# Optional (useful for some langchain features)
+tiktoken>=0.4.0
