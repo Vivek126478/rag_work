@@ -1,12 +1,24 @@
+# core
 streamlit
-pinecone
-langchain
-langchain-community
-langchain-google-genai
-cohere
-python-dotenv
-pypdf
-python-docx
-nest-asyncio
-PyPDF2
-langchain_text_splitters
+
+# LangChain + Google GenAI integration and new splitters package
+langchain>=0.0.320
+langchain-google-genai>=1.0.0
+langchain-text-splitters>=0.1.0
+
+# Pinecone (modern SDK that exposes `Pinecone` and `ServerlessSpec`)
+pinecone>=3.0.0
+
+# Reranking and LLMs
+cohere>=4.0.0
+
+# PDFs and docs
+PyPDF2>=3.0.0
+python-docx>=0.8.11
+
+# Utilities
+python-dotenv>=1.0.0
+nest-asyncio>=1.5.4
+
+# Optional: add if you use any async helpers or tokenizers
+# tiktoken>=0.4.0
