@@ -8,7 +8,7 @@ import pinecone
 from pinecone import Pinecone, ServerlessSpec
 from langchain_text_splitters import RecursiveCharacterTextSplitter
 from langchain_google_genai import GoogleGenerativeAIEmbeddings, ChatGoogleGenerativeAI
-from langchain_core.schema import HumanMessage, SystemMessage
+from langchain_core.messages import HumanMessage, SystemMessage
 from langchain.output_parsers import StructuredOutputParser, ResponseSchema
 import cohere
 from dotenv import load_dotenv
